@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* text-transform: capitalize; */
+    font-family: "Roboto", sans-serif;
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    all: unset;
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
+button {
+    all: unset;
+}
+
+
+/* global classes */
+.underline {
+    width: 7rem;
+    height: 5px;
+    border-radius: 15px;
+    background: orangered;
+    margin-top: 1rem;
+}
+
+
+/* app starts here */
+.app-container {
+    /* min-width: 100vw; */
+    width: 100vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 30% 60%;
+    grid-column-gap: 50px;
+    /* padding: 3rem; */
+}
+
+
+
+
+/* app ends here */
+
+
+/* section title starts here */
+.section {
+    margin-bottom: 8rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin: 2rem auto;
+    text-transform: capitalize;
+}
+
+.section input {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid gray;
+    padding: .5rem;
+    width: 50%;
+}
+
+.show-more {
+    font-size: .8rem;
+    color: blue;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.show-more:hover {
+    color: orangered;
+}
+
+/* section title ends here */
+
+
+
+
+/* sidebar starts here */
+.sideBar {
+    background: black;
+    position: relative;
+    text-transform: capitalize;
+}
+
+.sideBar-center {
+    width: 90%;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    padding: 2rem 0;
+    height: 100vh;
+}
+
+.links-container {
+    height: fit-content;
+}
+
+.logo-container {
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.cryptoLogo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.8rem;
+}
+
+.cryptoLogo img {
+    height: 50px;
+}
+
+.logo-container .signature span {
+    font-size: 1.3rem;
+    color: orangered;
+    margin-bottom: 3rem;
+}
+
+.link a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 10px;
+    cursor: pointer;
+    margin: 20px auto;
+    color: gainsboro;
+    padding: 10px;
+}
+
+.nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.nav-toggle {
+    font-size: 1.2rem;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.active {
+    border-radius: 5px;
+    background: blue;
+    color: #fff;
+}
+
+/* side bar ends here */
+
+
+
+/* card starts here */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    margin: 1rem auto;
+}
+
+.card {
+    margin-top: 2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: 2rem 1rem;
+    background: #e3e3e3;
+    transition: all .3s ease-in-out;
+}
+
+.title {
+    display: flex;
+}
+
+
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 20px 0;
+}
+
+.icon h3 {
+    font-size: 3rem;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    grid-gap: 20px 50px;
+    justify-content: space-between;
+    margin: 10px 0;
+    color: black;
+}
+
+.info p {
+    color: gray;
+}
+
+.card:hover {
+    box-shadow: 0 2px 5px gray;
+    transform: scale(1.01);
+}
+
+/* card ends here */
+
+@media screen and (max-width: 768px) {
+    .app-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-toggle {
+        visibility: visible;
+    }
+
+    .sideBar {
+        position: relative;
+    }
+
+    .sideBar-center {
+        height: auto !important;
+        /* overflow: hidden; */
+    }
+
+    .links-container {
+        height: 0;
+        overflow: hidden;
+    }
+
+    .show-links {
+        height: fit-content;
+    }
+
+    .section {
+        padding: 0 1rem;
+    }
+
+    .cryptoLogo {
+        font-size: 1.5rem;
+    }
+
+    .cryptoLogo img {
+        height: 40px;
+    }
+
+    .card-container {
+        width: 90vw;
+    }
+}
+
+
+
+/* market-info starts here */
+.market-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-gap: 20px 50px;
+    justify-content: space-between;
+    margin: 10px 0;
+    color: black;
+}
+
+/* market-info ends here */
+
+
+/* news card starts here */
+
+
+.news-card {
+    margin-top: 2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: 2rem 1rem;
+    background: #e3e3e378;
+    transition: all .3s ease-in-out;
+    display: grid;
+    grid-gap: 20px;
+}
+
+.news-card p {
+    font-size: .7rem;
+    color: gray;
+}
+
+.news-card h4 {
+    font-weight: 300;
+}
+
+.news-card img {
+    width: 100%;
+}
+
+
+
+.news-card:hover {
+    box-shadow: 0 2px 5px gray;
+    transform: scale(1.01);
+}
+
+/* news card ends here */
+
+
+/* coin details starts here */
+.crypto-detail-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 2rem 0;
+}
+
+.crypto-detail-container select {
+    max-width: 50%;
+}
+
+.crypto-title {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    gap: 20px;
+}
+
+.crypto-info {
+    display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+margin: 2rem 0;}
+
+
+.crypto-overview-center,
+.market-overview-center {
+    width: 100%;
+    text-transform: capitalize;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 20px;
+    cursor: pointer;
+}
+
+.crypto-overview-center h3,
+.market-overview-center h3 {
+    font-weight: 500;
+}
+
+
+.crypto-links {
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+.crypto-link-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 30px;
+    border-bottom: 2px solid gainsboro;
+    padding: 1rem 0;
+}
+
+.crypto-link-container a {
+    color: rgb(0, 128, 255);
+    cursor: pointer;
+}
+
+
+/* coin details ends here */
